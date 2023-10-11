@@ -1,0 +1,4 @@
+*
+!.config/nvim/**
+!.tmux.conf
+!.gitignore  # To ensure .gitignore itself is not ignored
