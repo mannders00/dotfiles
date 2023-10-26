@@ -1,9 +1,3 @@
-require('onedark').setup {
-    transparent = true
-}
-require('onedark').load()
-
-require("autoclose").setup()
 
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
@@ -13,9 +7,17 @@ require('packer').startup(function(use)
 	use 'navarasu/onedark.nvim'
 	use 'm4xshen/autoclose.nvim'
 	use 'neovim/nvim-lspconfig'
+	use 'lewis6991/gitsigns.nvim'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.3',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 end)
+
+require('onedark').setup {
+    transparent = true
+}
+require('onedark').load()
+require("autoclose").setup()
+require('gitsigns').setup()
 

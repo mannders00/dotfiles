@@ -1,3 +1,5 @@
+export PATH=$PATH:/home/matt/go/bin
+
 set -o vi
 alias vi=nvim
 alias ll="ls -l"

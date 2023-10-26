@@ -5,7 +5,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pyright' }
+local servers = { 'pyright', 'gopls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -58,8 +58,6 @@ cmp.setup {
   },
 }
 
-lspconfig.pyright.setup {}
-
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -67,10 +65,6 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 vim.api.nvim_set_keymap('i', '<c-n>', '<c-x><c-o>', {noremap = true, silent = true})
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
