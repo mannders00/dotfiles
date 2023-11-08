@@ -4,6 +4,7 @@ set -o vi
 alias vi=nvim
 alias ll="ls -l"
 export EDITOR='nvim'
+export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
