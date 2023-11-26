@@ -12,6 +12,18 @@ for _, lsp in ipairs(servers) do
 	}
 end
 
+-- Enable (broadcasting) snippet capability for completion
+capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.html.setup {
+	capabilities = capabilities,
+	filetypes = { "html", "htmldjango" }
+}
+-- lspconfig.cssls.setup {
+-- 	capabilities = capabilities,
+-- }
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 
@@ -54,8 +66,14 @@ cmp.setup {
 	sources = {
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
+		{ name = 'bootstrap' },
 	},
 }
+
+require("bootstrap-cmp.config"):setup({
+	file_types = { "html", "htmldjango" },
+})
+
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -79,6 +97,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+		vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
 		vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
 		vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
 		vim.keymap.set('n', '<space>wl', function()
