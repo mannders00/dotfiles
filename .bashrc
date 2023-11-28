@@ -3,6 +3,7 @@ export PATH=$PATH:/home/matt/go/bin
 set -o vi
 alias vi=nvim
 alias ll="ls -l"
+alias py=python3
 export EDITOR='nvim'
 export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 
