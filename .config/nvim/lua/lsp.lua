@@ -5,7 +5,7 @@ local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 
-local servers = { 'pyright', 'gopls' }
+local servers = { 'pyright', 'gopls', 'cssls' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
@@ -16,7 +16,10 @@ lspconfig.html.setup {
 	capabilities = capabilities,
 	filetypes = { "html", "htmldjango" }
 }
-lspconfig.cssls.setup {}
+lspconfig.htmx.setup {
+	capabilities = capabilities,
+	filetypes = { "html", "htmldjango" }
+}
 
 -- luasnip setup
 local luasnip = require 'luasnip'

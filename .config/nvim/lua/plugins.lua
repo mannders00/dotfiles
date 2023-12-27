@@ -4,7 +4,6 @@ require('packer').startup(function(use)
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
 	use 'Jezda1337/cmp_bootstrap'
 	use 'L3MON4D3/LuaSnip'  -- Snippets plugin
-	use 'nvim-tree/nvim-tree.lua'
 	use 'navarasu/onedark.nvim'
 	use 'm4xshen/autoclose.nvim'
 	use 'neovim/nvim-lspconfig'
@@ -18,7 +17,6 @@ end)
 require("bootstrap-cmp.config").setup({
 	file_types = { 'html', 'htmldjango' },
 })
-require("nvim-tree").setup()
 require('onedark').setup {
 	transparent = true,
 	toggle_style_key = '<space>t',
