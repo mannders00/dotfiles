@@ -1,19 +1,37 @@
-require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
-	use 'hrsh7th/nvim-cmp'  -- Autocompletion plugin
-	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-	use 'Jezda1337/cmp_bootstrap'
-	use 'L3MON4D3/LuaSnip'  -- Snippets plugin
-	use 'navarasu/onedark.nvim'
-	use 'm4xshen/autoclose.nvim'
-	use 'neovim/nvim-lspconfig'
-	use 'lewis6991/gitsigns.nvim'
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.3',
-		requires = { { 'nvim-lua/plenary.nvim' } }
-	}
-end)
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
+-- Install Plugins
+require('lazy').setup({
+	'wbthomason/packer.nvim',
+	'williamboman/mason.nvim',
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-nvim-lsp',
+	'Jezda1337/cmp_bootstrap',
+	'nvim-tree/nvim-tree.lua',
+	'L3MON4D3/LuaSnip',
+	'navarasu/onedark.nvim',
+	'm4xshen/autoclose.nvim',
+	'neovim/nvim-lspconfig',
+	'lewis6991/gitsigns.nvim',
+	'nvim-telescope/telescope.nvim',
+	'nvim-lua/plenary.nvim',
+})
+
+-- Initialize Plugins
+require("mason").setup()
+require("nvim-tree").setup()
 require("bootstrap-cmp.config").setup({
 	file_types = { 'html', 'htmldjango' },
 })
