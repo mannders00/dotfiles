@@ -14,13 +14,12 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Install Plugins
 require('lazy').setup({
-	'wbthomason/packer.nvim',
 	'williamboman/mason.nvim',
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-nvim-lsp',
 	'Jezda1337/cmp_bootstrap',
 	'nvim-tree/nvim-tree.lua',
-	'L3MON4D3/LuaSnip',
+	{'L3MON4D3/LuaSnip', version = 'v2.0.0'},
 	'navarasu/onedark.nvim',
 	'm4xshen/autoclose.nvim',
 	'neovim/nvim-lspconfig',

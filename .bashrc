@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 export PATH=$PATH:/Users/matt/go/bin
 
 set -o vi
