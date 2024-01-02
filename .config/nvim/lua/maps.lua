@@ -2,8 +2,6 @@ vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, s
 
 local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>')
-
 vim.keymap.set('n', '<C-l>', builtin.find_files, {})
 vim.keymap.set('n', '<C-k>', builtin.live_grep, {})
 vim.keymap.set('n', '<C-p>', builtin.commands, {})
