@@ -22,7 +22,7 @@ require('lazy').setup({
 	'hrsh7th/cmp-nvim-lsp',
 	'Jezda1337/cmp_bootstrap',
 	'folke/neodev.nvim',
-	{ 'L3MON4D3/LuaSnip', version = 'v2.0.0' },
+	{ 'L3MON4D3/LuaSnip', version = 'v2.1.0' },
 	-- DAP
 	-- Visual
 	'nvim-tree/nvim-tree.lua',
