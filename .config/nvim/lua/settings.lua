@@ -6,4 +6,3 @@ vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.g.netrw_winsize = 20

@@ -24,6 +24,10 @@ require('lazy').setup({
 	'folke/neodev.nvim',
 	{ 'L3MON4D3/LuaSnip', version = 'v2.1.0' },
 	-- DAP
+	'mfussenegger/nvim-dap',
+	'rcarriga/nvim-dap-ui',
+	'mfussenegger/nvim-dap-python',
+	'leoluz/nvim-dap-go',
 	-- Visual
 	'nvim-tree/nvim-tree.lua',
 	'navarasu/onedark.nvim',
@@ -51,3 +55,19 @@ require('onedark').load()
 require('gitsigns').setup()
 require("autoclose").setup()
 require('which-key').setup()
+
+-- DAP Setup
+local dap, dapui = require("dap"), require("dapui")
+dapui.setup()
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+	dapui.close()
+end
+
+require('dap-python').setup('~/venv/bin/python')
+require('dap-go').setup()
