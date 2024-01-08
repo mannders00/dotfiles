@@ -42,7 +42,7 @@ require('lazy').setup({
 -- Initialize Plugins
 require("mason").setup()
 require("bootstrap-cmp.config").setup({
-	file_types = { 'html', 'htmldjango' },
+	file_types = { 'html', 'htmldjango', 'template' },
 })
 require('neodev').setup()
 require("nvim-tree").setup()
