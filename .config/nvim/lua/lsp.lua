@@ -21,10 +21,10 @@ lspconfig.htmx.setup {
 }
 
 -- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip = require('luasnip')
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
+local cmp = require('cmp')
 cmp.setup {
 	snippet = {
 		expand = function(args)
@@ -64,7 +64,17 @@ cmp.setup {
 		{ name = 'luasnip' },
 		{ name = 'bootstrap' },
 	},
+	window = {
+		hover = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 }
+
+-- Bordered LSP UI
+local float = { focusable = true, style = "minimal", border = "rounded", }
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

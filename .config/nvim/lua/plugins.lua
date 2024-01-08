@@ -30,6 +30,7 @@ require('lazy').setup({
 	'leoluz/nvim-dap-go',
 	-- Visual
 	'nvim-tree/nvim-tree.lua',
+	'nvim-lualine/lualine.nvim',
 	'navarasu/onedark.nvim',
 	'lewis6991/gitsigns.nvim',
 	-- Utility
@@ -45,8 +46,12 @@ require("bootstrap-cmp.config").setup({
 	file_types = { 'html', 'htmldjango' },
 })
 require('neodev').setup()
-require("nvim-tree").setup()
+require('nvim-tree').setup()
 require('onedark').setup {
+	colors = {
+		black = "000000F",
+		bg1 = "000000F",
+	},
 	transparent = true,
 	toggle_style_key = '<space>t',
 	toggle_style_list = { 'dark', 'light' },
