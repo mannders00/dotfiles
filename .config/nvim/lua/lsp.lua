@@ -1,5 +1,5 @@
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lspconfig = require('lspconfig')
 
@@ -13,11 +13,11 @@ end
 
 lspconfig.html.setup {
 	capabilities = capabilities,
-	filetypes = { "html", "htmldjango" }
+	filetypes = { 'html', 'htmldjango', 'template' }
 }
 lspconfig.htmx.setup {
 	capabilities = capabilities,
-	filetypes = { "html", "htmldjango" }
+	filetypes = { 'html', 'htmldjango', 'template' }
 }
 
 -- luasnip setup
