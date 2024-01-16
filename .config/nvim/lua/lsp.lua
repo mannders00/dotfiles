@@ -19,6 +19,12 @@ lspconfig.htmx.setup {
 	capabilities = capabilities,
 	filetypes = { 'html', 'htmldjango', 'template' }
 }
+lspconfig.yamlls.setup {
+	capabilities = capabilities,
+	settings = { yaml = { schemas = {
+		["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*", }, },
+	}
+}
 
 -- luasnip setup
 local luasnip = require('luasnip')
