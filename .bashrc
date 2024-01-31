@@ -1,11 +1,22 @@
+ranger_cd() {
+    tempfile="$(mktemp -t "ranger_cd.XXXXXX")"
+    ranger --choosedir="$tempfile" "${@:-$PWD}"
+    if chosen_dir="$(cat -- "$tempfile")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
+        cd -- "$chosen_dir"
+    fi
+    rm -f -- "$tempfile"
+}
+alias ranger='ranger_cd'
+
 export TERM=xterm-256color
 
 export PATH=$PATH:/Users/matt/go/bin
+export PATH=$PATH:/Users/matt/Development/Applications/dart-sass
 
 set -o vi
 alias vi=nvim
 alias py=python3
-alias r=ranger
+alias r=ranger_cd
 export EDITOR='nvim'
 export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 
@@ -123,3 +134,5 @@ if ! shopt -oq posix; then
   fi
 fi
 #. "$HOME/.cargo/env"
+#
+
