@@ -33,6 +33,7 @@ require('lazy').setup({
 	'nvim-lualine/lualine.nvim',
 	'navarasu/onedark.nvim',
 	'lewis6991/gitsigns.nvim',
+	'norcalli/nvim-colorizer.lua',
 	-- Utility
 	'm4xshen/autoclose.nvim',
 	'nvim-telescope/telescope.nvim',
@@ -58,6 +59,7 @@ require('onedark').setup {
 }
 require('onedark').load()
 require('gitsigns').setup()
+require('colorizer').setup()
 require("autoclose").setup()
 require('which-key').setup()
 
