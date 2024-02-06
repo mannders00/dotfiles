@@ -29,6 +29,7 @@ require('lazy').setup({
 	'mfussenegger/nvim-dap-python',
 	'leoluz/nvim-dap-go',
 	-- Visual
+	'nvim-treesitter/nvim-treesitter',
 	'nvim-tree/nvim-tree.lua',
 	'nvim-lualine/lualine.nvim',
 	'navarasu/onedark.nvim',
@@ -47,6 +48,12 @@ require("bootstrap-cmp.config").setup({
 	file_types = { 'html', 'htmldjango', 'template' },
 })
 require('neodev').setup()
+require 'nvim-treesitter.configs'.setup {
+	ensure_installed = { "python", "go", "lua", "markdown_inline" },
+	highlight = {
+		enable = true,
+	}
+}
 require('nvim-tree').setup()
 require('onedark').setup {
 	colors = {
