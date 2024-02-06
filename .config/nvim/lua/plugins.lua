@@ -49,7 +49,7 @@ require("bootstrap-cmp.config").setup({
 })
 require('neodev').setup()
 require 'nvim-treesitter.configs'.setup {
-	ensure_installed = { "python", "go", "lua", "markdown_inline" },
+	ensure_installed = { "python", "go", "lua", "dockerfile", "markdown_inline" },
 	highlight = {
 		enable = true,
 	}
