@@ -35,6 +35,7 @@ require('lazy').setup({
 	'navarasu/onedark.nvim',
 	'lewis6991/gitsigns.nvim',
 	'norcalli/nvim-colorizer.lua',
+	'mhartington/formatter.nvim',
 	-- Utility
 	'm4xshen/autoclose.nvim',
 	'nvim-telescope/telescope.nvim',
@@ -70,7 +71,28 @@ require('onedark').setup {
 require('onedark').load()
 require('gitsigns').setup()
 require('colorizer').setup()
-require("autoclose").setup()
+require('formatter').setup({
+	filetype = {
+		python = {
+			function()
+				return {
+					exe = "black",
+					args = { "--quiet", "-" },
+					stdin = true
+				}
+			end
+		}
+	}
+})
+require('telescope').setup {
+	pickers = {
+		find_files = {
+			find_command = { 'rg', '--no-ignore', '--files' },
+		}
+	}
+}
+
+require('autoclose').setup()
 require('which-key').setup()
 
 -- DAP Setup
