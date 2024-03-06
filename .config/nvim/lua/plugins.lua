@@ -91,7 +91,6 @@ require('telescope').setup {
 		}
 	}
 }
-
 require('autoclose').setup()
 require('which-key').setup()
 
