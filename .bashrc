@@ -17,6 +17,12 @@ set -o vi
 alias vi=nvim
 alias py=python3
 alias r=ranger_cd
+
+alias ga='git add'
+alias gcm='git commit -m'
+alias gst='git status'
+alias gp='git push'
+
 export EDITOR='nvim'
 export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 
