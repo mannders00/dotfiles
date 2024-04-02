@@ -18,6 +18,7 @@ alias vi=nvim
 alias py=python3
 alias r=ranger_cd
 
+# Git aliases
 alias ga='git add'
 alias gcm='git commit -m'
 alias gst='git status'
