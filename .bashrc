@@ -14,6 +14,7 @@ export PATH=$PATH:/Users/matt/go/bin
 export PATH=$PATH:/Users/matt/Development/Applications/dart-sass
 
 set -o vi
+alias ls='ls --color=auto'
 alias vi=nvim
 alias py=python3
 alias r=ranger_cd
