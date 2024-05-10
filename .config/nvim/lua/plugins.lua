@@ -58,7 +58,13 @@ require('nvim-treesitter.configs').setup {
 		additional_vim_regex_highlighting = true,
 	},
 }
-require('nvim-tree').setup()
+require('nvim-tree').setup({
+    actions = {
+      open_file = {
+        resize_window = false,
+      },
+    },
+})
 require('onedark').setup {
 	colors = {
 		black = "000000F",

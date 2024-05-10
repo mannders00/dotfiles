@@ -4,21 +4,13 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'lua_ls', 'pyright', 'gopls', 'cssls', 'emmet_ls', 'spectral' }
+local servers = { 'lua_ls', 'pyright', 'gopls', 'cssls', 'emmet_ls', 'spectral', 'tsserver', 'html', 'htmx' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
 	}
 end
 
-lspconfig.html.setup {
-	capabilities = capabilities,
-	filetypes = { 'html', 'htmldjango', 'template' }
-}
-lspconfig.htmx.setup {
-	capabilities = capabilities,
-	filetypes = { 'html', 'htmldjango', 'template' }
-}
 lspconfig.yamlls.setup {
 	capabilities = capabilities,
 	settings = { yaml = { schemas = {
