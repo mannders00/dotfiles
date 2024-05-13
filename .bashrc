@@ -148,3 +148,64 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+
+ALACRITTY_DARK='
+[colors.bright]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#bfc5ce"
+yellow = "#e5c07b"
+
+[colors.normal]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#abb2bf"
+yellow = "#e5c07b"
+
+[colors.primary]
+background = "#000000"
+foreground = "#abb2bf"
+
+[font]
+normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
+'
+
+ALACRITTY_LIGHT='
+[colors.primary]
+background = "#f8f8f8"
+foreground = "#2a2b33"
+
+[colors.normal]
+black   = "#000000"
+red     = "#de3d35"
+green   = "#3e953a"
+yellow  = "#d2b67b"
+blue    = "#2f5af3"
+magenta = "#a00095"
+cyan    = "#3e953a"
+white   = "#bbbbbb"
+
+[colors.bright]
+black   = "#000000"
+red     = "#de3d35"
+green   = "#3e953a"
+yellow  = "#d2b67b"
+blue    = "#2f5af3"
+magenta = "#a00095"
+cyan    = "#3e953a"
+white   = "#ffffff"
+
+[font]
+normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
+'
+
+alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
+alias al="echo -e \"\${ALACRITTY_LIGHT}\" > ~/.config/alacritty/alacritty.toml"
