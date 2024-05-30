@@ -58,7 +58,14 @@ require('nvim-treesitter.configs').setup {
 		additional_vim_regex_highlighting = true,
 	},
 }
+-- Disable <C-e> as open file in nvim-tree. Instead, move view down, like the default.
+local function my_on_attach(bufnr)
+  local api = require "nvim-tree.api"
+  api.config.mappings.default_on_attach(bufnr)
+  vim.keymap.del('n', '<C-e>', { buffer = bufnr })
+end
 require('nvim-tree').setup({
+	on_attach = my_on_attach,
     actions = {
       open_file = {
         resize_window = false,
