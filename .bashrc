@@ -1,3 +1,5 @@
+echo "let's have some fun"
+
 ranger_cd() {
     tempfile="$(mktemp -t "ranger_cd.XXXXXX")"
     ranger --choosedir="$tempfile" "${@:-$PWD}"
