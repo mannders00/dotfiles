@@ -1,4 +1,4 @@
-echo "let's have some fun"
+echo "Let's have some fun."
 
 ranger_cd() {
     tempfile="$(mktemp -t "ranger_cd.XXXXXX")"
