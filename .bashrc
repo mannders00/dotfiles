@@ -182,7 +182,7 @@ normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
 ALACRITTY_LIGHT='
 [colors.primary]
-background = "#eeeeee"
+background = "#F5F5DC"
 foreground = "#2a2b33"
 
 [colors.normal]
