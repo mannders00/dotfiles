@@ -1,27 +1,27 @@
 
-[colors.primary]
-background = "#FFFFF0"
-foreground = "#2a2b33"
+[colors.bright]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#bfc5ce"
+yellow = "#e5c07b"
 
 [colors.normal]
-black   = "#000000"
-red     = "#de3d35"
-green   = "#3e953a"
-yellow  = "#d2b67b"
-blue    = "#2f5af3"
-magenta = "#a00095"
-cyan    = "#3e953a"
-white   = "#bbbbbb"
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#abb2bf"
+yellow = "#e5c07b"
 
-[colors.bright]
-black   = "#000000"
-red     = "#de3d35"
-green   = "#3e953a"
-yellow  = "#d2b67b"
-blue    = "#2f5af3"
-magenta = "#a00095"
-cyan    = "#3e953a"
-white   = "#ffffff"
+[colors.primary]
+background = "#000000"
+foreground = "#abb2bf"
 
 [font]
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
