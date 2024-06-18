@@ -97,13 +97,7 @@ require('formatter').setup({
 		}
 	}
 })
-require('telescope').setup {
-	pickers = {
-		find_files = {
-			find_command = { 'rg', '--no-ignore', '--files' },
-		}
-	}
-}
+require('telescope').setup()
 require('autoclose').setup()
 require('which-key').setup()
 
