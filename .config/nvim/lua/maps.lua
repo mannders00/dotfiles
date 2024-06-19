@@ -7,4 +7,4 @@ vim.keymap.set('n', '?', ':WhichKey<CR>', {})
 
 vim.keymap.set('i', '<C-e>', 'if err != nil {}<Left>', { noremap = true })
 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]
