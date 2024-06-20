@@ -37,7 +37,7 @@ require('lazy').setup({
 	'norcalli/nvim-colorizer.lua',
 	'mhartington/formatter.nvim',
 	-- Utility
-	'm4xshen/autoclose.nvim',
+	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
 	'nvim-lua/plenary.nvim',
 	'folke/which-key.nvim',
@@ -98,7 +98,7 @@ require('formatter').setup({
 	}
 })
 require('telescope').setup()
-require('autoclose').setup()
+require('nvim-autopairs').setup()
 require('which-key').setup()
 
 -- DAP Setup
