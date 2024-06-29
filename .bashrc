@@ -1,5 +1,3 @@
-echo "Let's have some fun."
-
 ranger_cd() {
     tempfile="$(mktemp -t "ranger_cd.XXXXXX")"
     ranger --choosedir="$tempfile" "${@:-$PWD}"
@@ -13,6 +11,7 @@ alias ranger='ranger_cd'
 export TERM=xterm-256color
 
 export PATH=$PATH:/Users/matt/go/bin
+#export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/Users/matt/Development/Applications/dart-sass
 
 set -o vi
