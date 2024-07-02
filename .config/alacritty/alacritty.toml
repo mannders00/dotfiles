@@ -26,3 +26,6 @@ foreground = "#abb2bf"
 [font]
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
+[window]
+dynamic_padding = true
+decorations = "None"
