@@ -4,7 +4,6 @@ vim.o.shiftwidth = 4
 vim.o.autoindent = true
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
-vim.o.scrolloff = 42069
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
