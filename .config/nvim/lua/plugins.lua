@@ -36,6 +36,7 @@ require('lazy').setup({
 	'lewis6991/gitsigns.nvim',
 	'norcalli/nvim-colorizer.lua',
 	'mhartington/formatter.nvim',
+	'arnamak/stay-centered.nvim',
 	-- Utility
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
@@ -97,6 +98,7 @@ require('formatter').setup({
 		}
 	}
 })
+require('stay-centered').setup()
 require('telescope').setup()
 require('nvim-autopairs').setup()
 require('which-key').setup()
