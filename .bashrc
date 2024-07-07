@@ -177,11 +177,15 @@ foreground = "#abb2bf"
 
 [font]
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
+
+[window]
+dynamic_padding = true
+decorations = "None"
 '
 
 ALACRITTY_LIGHT='
 [colors.primary]
-background = "#EEEEE0"
+background = "#FFFFFF"
 foreground = "#2a2b33"
 
 [colors.normal]
@@ -206,6 +210,10 @@ white   = "#ffffff"
 
 [font]
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
+
+[window]
+dynamic_padding = true
+decorations = "None"
 '
 
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
