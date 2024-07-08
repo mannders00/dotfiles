@@ -178,9 +178,11 @@ foreground = "#abb2bf"
 [font]
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
-[window]
-dynamic_padding = true
 decorations = "None"
+[window]
+padding = {x = 4, y = 4}
+dynamic_padding = true
+decorations = "Buttonless"
 '
 
 ALACRITTY_LIGHT='
@@ -212,8 +214,9 @@ white   = "#ffffff"
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
 [window]
+padding = {x = 4, y = 4}
 dynamic_padding = true
-decorations = "None"
+decorations = "Buttonless"
 '
 
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
