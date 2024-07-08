@@ -172,7 +172,7 @@ white = "#abb2bf"
 yellow = "#e5c07b"
 
 [colors.primary]
-background = "#000000"
+background = "#111111"
 foreground = "#abb2bf"
 
 [font]
@@ -185,7 +185,7 @@ decorations = "None"
 
 ALACRITTY_LIGHT='
 [colors.primary]
-background = "#FFFFFF"
+background = "#EEEEEE"
 foreground = "#2a2b33"
 
 [colors.normal]
