@@ -178,7 +178,6 @@ foreground = "#abb2bf"
 [font]
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
-decorations = "None"
 [window]
 padding = {x = 4, y = 4}
 dynamic_padding = true
