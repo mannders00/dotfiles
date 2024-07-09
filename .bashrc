@@ -179,8 +179,6 @@ foreground = "#abb2bf"
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
 [window]
-padding = {x = 4, y = 4}
-dynamic_padding = true
 decorations = "None"
 '
 
@@ -213,8 +211,6 @@ white   = "#ffffff"
 normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
 
 [window]
-padding = {x = 4, y = 4}
-dynamic_padding = true
 decorations = "None"
 '
 
