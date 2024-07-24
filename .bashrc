@@ -184,7 +184,7 @@ decorations = "None"
 
 ALACRITTY_LIGHT='
 [colors.primary]
-background = "#EEEEEE"
+background = "#EEE0E0"
 foreground = "#2a2b33"
 
 [colors.normal]
