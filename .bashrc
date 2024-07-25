@@ -18,7 +18,6 @@ set -o vi
 alias ls='ls --color=auto'
 alias vi=nvim
 alias py=python3
-alias r=ranger_cd
 
 # Git aliases
 alias ga='git add'
