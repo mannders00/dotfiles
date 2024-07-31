@@ -1,13 +1,3 @@
-ranger_cd() {
-    tempfile="$(mktemp -t "ranger_cd.XXXXXX")"
-    ranger --choosedir="$tempfile" "${@:-$PWD}"
-    if chosen_dir="$(cat -- "$tempfile")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
-        cd -- "$chosen_dir"
-    fi
-    rm -f -- "$tempfile"
-}
-alias ranger='ranger_cd'
-
 export TERM=xterm-256color
 
 export PATH=$PATH:/Users/matt/go/bin
@@ -32,6 +22,37 @@ export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+#
+n ()
+{
+    # Block nesting of nnn in subshells
+    [ "${NNNLVL:-0}" -eq 0 ] || {
+        echo "nnn is already running"
+        return
+    }
+
+    # The behaviour is set to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # If NNN_TMPFILE is set to a custom path, it must be exported for nnn to
+    # see. To cd on quit only on ^G, remove the "export" and make sure not to
+    # use a custom path, i.e. set NNN_TMPFILE *exactly* as follows:
+    #      NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+    # stty start undef
+    # stty stop undef
+    # stty lwrap undef
+    # stty lnext undef
+
+    # The command builtin allows one to alias nnn to n, if desired, without
+    # making an infinitely recursive alias
+    command nnn -C "$@"
+
+    [ ! -f "$NNN_TMPFILE" ] || {
+        . "$NNN_TMPFILE"
+        rm -f -- "$NNN_TMPFILE" > /dev/null
+    }
+}
 
 # If not running interactively, don't do anything
 case $- in
@@ -184,7 +205,7 @@ decorations = "None"
 
 ALACRITTY_LIGHT='
 [colors.primary]
-background = "#EEEEEE"
+background = "#D8D8D8"
 foreground = "#2a2b33"
 
 [colors.normal]
