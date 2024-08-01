@@ -61,6 +61,7 @@ require('nvim-treesitter.configs').setup {
 }
 require('nnn').setup({
 	picker = {
+		cmd = "nnn -C",
 		style = { border = "rounded" },
 		session = "shared",
 		tabs = false,
@@ -92,7 +93,7 @@ require('formatter').setup({
 	}
 })
 require('stay-centered').setup()
-require('telescope').setup()
+require('telescope').setup({})
 require('nvim-autopairs').setup()
 require('which-key').setup()
 
