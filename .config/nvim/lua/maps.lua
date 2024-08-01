@@ -36,7 +36,9 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':lua enter_resize_mode()<CR>', { nore
 
 -- Map Ctrl+Shift+h/j/k/l to resize panes
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-b>', ':NvimTreeFindFileToggle<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('t', '<C-b>', '<cmd>NnnExplorer<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>NnnExplorer %:p:h<CR>', { noremap = true })
 vim.keymap.set('n', '<C-l>', builtin.find_files, {})
 vim.keymap.set('n', '<C-k>', builtin.live_grep, {})
 vim.keymap.set('n', '<C-p>', builtin.commands, {})
@@ -56,3 +58,4 @@ vim.keymap.set('n', '<leader>6', '6gt', {})
 vim.keymap.set('n', '<leader>7', '7gt', {})
 vim.keymap.set('n', '<leader>8', '8gt', {})
 vim.keymap.set('n', '<leader>9', '9gt', {})
+
