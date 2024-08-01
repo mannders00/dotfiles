@@ -60,9 +60,11 @@ require('nvim-treesitter.configs').setup {
 	},
 }
 require('nnn').setup({
-  picker = {
-    style = { border = "rounded" },
-  },
+	picker = {
+		style = { border = "rounded" },
+		session = "shared",
+		tabs = false,
+	},
 })
 require('onedark').setup {
 	colors = {
