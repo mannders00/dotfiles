@@ -38,9 +38,9 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':lua enter_resize_mode()<CR>', { nore
 local builtin = require('telescope.builtin')
 
 -- nnn
-vim.api.nvim_set_keymap('t', '<C-b>', '<cmd>NnnPicker <CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-b>', ':NnnPicker <CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-f>', ':NnnPicker %:p:h<CR>', { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-f>', '<cmd>NnnPicker <CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-f>', ':NnnPicker <CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-b>', ':NnnPicker %:p:h<CR>', { noremap = true })
 
 -- Telescope
 vim.keymap.set('n', '<C-l>', builtin.find_files, {})
