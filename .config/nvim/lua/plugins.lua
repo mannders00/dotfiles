@@ -59,7 +59,11 @@ require('nvim-treesitter.configs').setup {
 		additional_vim_regex_highlighting = true,
 	},
 }
-require('nnn').setup()
+require('nnn').setup({
+  picker = {
+    style = { border = "rounded" },
+  },
+})
 require('onedark').setup {
 	colors = {
 		black = "000000F",
