@@ -64,7 +64,6 @@ require('nnn').setup({
 		cmd = "nnn -C",
 		style = { border = "rounded" },
 		session = "shared",
-		tabs = false,
 	},
 })
 require('onedark').setup {
