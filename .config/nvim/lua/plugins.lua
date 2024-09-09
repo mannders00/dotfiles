@@ -63,7 +63,7 @@ require('nnn').setup({
 	picker = {
 		cmd = "nnn -C",
 		style = { border = "rounded" },
-		session = "shared",
+		fullscreen = false,
 	},
 })
 require('onedark').setup {
