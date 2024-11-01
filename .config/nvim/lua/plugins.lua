@@ -35,7 +35,6 @@ require('lazy').setup({
 	'lewis6991/gitsigns.nvim',
 	'norcalli/nvim-colorizer.lua',
 	'mhartington/formatter.nvim',
-	'arnamak/stay-centered.nvim',
 	{ "water-sucks/darkrose.nvim", lazy = false, priority = 1000, },
 	-- Utility
 	'windwp/nvim-autopairs',
@@ -81,7 +80,6 @@ require('formatter').setup({
 		}
 	}
 })
-require('stay-centered').setup()
 require('telescope').setup({})
 require('nvim-autopairs').setup()
 require('which-key').setup()
