@@ -32,11 +32,11 @@ require('lazy').setup({
 	'nvim-treesitter/nvim-treesitter',
 	'luukvbaal/nnn.nvim',
 	'nvim-lualine/lualine.nvim',
-	'navarasu/onedark.nvim',
 	'lewis6991/gitsigns.nvim',
 	'norcalli/nvim-colorizer.lua',
 	'mhartington/formatter.nvim',
 	'arnamak/stay-centered.nvim',
+	{ "water-sucks/darkrose.nvim", lazy = false, priority = 1000, },
 	-- Utility
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
@@ -66,16 +66,6 @@ require('nnn').setup({
 		fullscreen = false,
 	},
 })
-require('onedark').setup {
-	colors = {
-		black = "000000F",
-		bg1 = "000000F",
-	},
-	transparent = true,
-	toggle_style_key = '<space>t',
-	toggle_style_list = { 'dark', 'light' },
-}
-require('onedark').load()
 require('gitsigns').setup()
 require('colorizer').setup()
 require('formatter').setup({

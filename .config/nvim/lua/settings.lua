@@ -8,3 +8,6 @@ vim.o.wrap = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
+vim.o.clipboard="unnamedplus"
+vim.opt.termguicolors = true
+vim.cmd('colorscheme darkrose')

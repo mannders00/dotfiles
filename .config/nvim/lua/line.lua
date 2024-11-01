@@ -6,17 +6,17 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-	bg       = '#202328',
-	fg       = '#bbc2cf',
-	yellow   = '#ECBE7B',
-	cyan     = '#008080',
-	darkblue = '#081633',
-	green    = '#98be65',
-	orange   = '#FF8800',
-	violet   = '#a9a1e1',
-	magenta  = '#c678dd',
-	blue     = '#51afef',
-	red      = '#ec5f67',
+    bg       = '#281C2B',   -- dark_purple
+    fg       = '#8B8B8B',   -- gray
+    yellow   = '#F0883E',   -- light_orange
+    cyan     = '#F6ACA7',   -- light_pink
+    darkblue = '#6D0011',   -- dark_red
+    green    = '#FF7979',   -- pink
+    orange   = '#A26B35',   -- orange
+    violet   = '#B76E79',   -- dark_pink
+    magenta  = '#8B2950',   -- magenta
+    blue     = '#F85149',   -- light_red
+    red      = '#9E4244',   -- red
 }
 
 local conditions = {
