@@ -29,13 +29,13 @@ require('lazy').setup({
 	-- 'mfussenegger/nvim-dap-python',
 	-- 'leoluz/nvim-dap-go',
 	-- Visual
+	'navarasu/onedark.nvim',
 	'nvim-treesitter/nvim-treesitter',
 	'luukvbaal/nnn.nvim',
 	'nvim-lualine/lualine.nvim',
 	'lewis6991/gitsigns.nvim',
 	'norcalli/nvim-colorizer.lua',
 	'mhartington/formatter.nvim',
-	{ "water-sucks/darkrose.nvim", lazy = false, priority = 1000, },
 	-- Utility
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
@@ -83,6 +83,16 @@ require('formatter').setup({
 require('telescope').setup({})
 require('nvim-autopairs').setup()
 require('which-key').setup()
+require('onedark').setup {
+	colors = {
+		black = "#111111",
+		bg1 = "#111111",
+	},
+	transparent = true,
+	toggle_style_key = '<space>t',
+	toggle_style_list = { 'dark', 'light' },
+}
+require('onedark').load()
 
 -- DAP Setup
 -- local dap, dapui = require("dap"), require("dapui")
@@ -96,6 +106,6 @@ require('which-key').setup()
 -- dap.listeners.before.event_exited["dapui_config"] = function()
 -- 	dapui.close()
 -- end
--- 
+--
 -- require('dap-python').setup('~/venv/bin/python')
 -- require('dap-go').setup()

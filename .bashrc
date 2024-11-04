@@ -15,6 +15,8 @@ alias gcm='git commit -m'
 alias gst='git status'
 alias gp='git push'
 
+alias vd='vd --theme asciimono'
+
 export EDITOR='nvim'
 export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 
@@ -192,7 +194,7 @@ white = "#abb2bf"
 yellow = "#e5c07b"
 
 [colors.primary]
-background = "#000000"
+background = "#111111"
 foreground = "#abb2bf"
 
 [font]
