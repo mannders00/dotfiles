@@ -40,8 +40,6 @@ local builtin = require('telescope.builtin')
 -- nnn
 vim.api.nvim_set_keymap('n', '<C-f>', ':NnnPicker %:p:h<CR>', { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-f>', '<cmd>NnnPicker %:p:h<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-b>', ':NnnExplorer %:p:h<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-b>', '<cmd>NnnExplorer %:p:h<CR>', { noremap = true })
 
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>NvimTreeToggle <CR>', { noremap = true })
