@@ -194,14 +194,11 @@ white = "#abb2bf"
 yellow = "#e5c07b"
 
 [colors.primary]
-background = "#111111"
+background = "#000000"
 foreground = "#abb2bf"
 
 [font]
-normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
-
-[window]
-decorations = "None"
+normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 '
 
 ALACRITTY_LIGHT='
@@ -230,10 +227,7 @@ cyan    = "#3e953a"
 white   = "#ffffff"
 
 [font]
-normal = { family = "Inconsolata Nerd Font Mono", style = "Regular" }
-
-[window]
-decorations = "None"
+normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 '
 
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"

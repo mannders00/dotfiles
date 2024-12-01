@@ -32,6 +32,7 @@ require('lazy').setup({
 	'navarasu/onedark.nvim',
 	'nvim-treesitter/nvim-treesitter',
 	'luukvbaal/nnn.nvim',
+	'nvim-tree/nvim-tree.lua',
 	'nvim-lualine/lualine.nvim',
 	'lewis6991/gitsigns.nvim',
 	'norcalli/nvim-colorizer.lua',
@@ -65,6 +66,7 @@ require('nnn').setup({
 		fullscreen = false,
 	},
 })
+require('nvim-tree').setup()
 require('gitsigns').setup()
 require('colorizer').setup()
 require('formatter').setup({
@@ -85,8 +87,8 @@ require('nvim-autopairs').setup()
 require('which-key').setup()
 require('onedark').setup {
 	colors = {
-		black = "#111111",
-		bg1 = "#111111",
+		black = "#000000",
+		bg1 = "#000000",
 	},
 	transparent = true,
 	toggle_style_key = '<space>t',

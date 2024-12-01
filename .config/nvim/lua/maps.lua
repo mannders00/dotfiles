@@ -41,6 +41,9 @@ local builtin = require('telescope.builtin')
 vim.api.nvim_set_keymap('n', '<C-f>', ':NnnPicker %:p:h<CR>', { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-f>', '<cmd>NnnPicker %:p:h<CR>', { noremap = true })
 
+-- nvim-tree
+vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>NvimTreeToggle <CR>', { noremap = true })
+
 -- Telescope
 vim.keymap.set('n', '<C-l>', builtin.find_files, {})
 vim.keymap.set('n', '<C-k>', builtin.live_grep, {})
