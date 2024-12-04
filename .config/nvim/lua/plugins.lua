@@ -66,7 +66,16 @@ require('nnn').setup({
 		fullscreen = false,
 	},
 })
-require('nvim-tree').setup()
+require('nvim-tree').setup({
+	view = {
+		side = "right"
+	},
+	actions = {
+		open_file = {
+			resize_window = false,
+		},
+	},
+})
 require('gitsigns').setup()
 require('colorizer').setup()
 require('formatter').setup({
