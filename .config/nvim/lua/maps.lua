@@ -43,6 +43,7 @@ vim.api.nvim_set_keymap('t', '<C-f>', '<cmd>NnnPicker %:p:h<CR>', { noremap = tr
 
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>NvimTreeToggle <CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>b', ':NvimTreeResize ', { noremap = true })
 
 -- Telescope
 vim.keymap.set('n', '<C-l>', builtin.find_files, {})
