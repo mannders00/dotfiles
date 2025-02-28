@@ -24,10 +24,15 @@ require('lazy').setup({
 	'folke/neodev.nvim',
 	{ 'L3MON4D3/LuaSnip', version = 'v2.1.0' },
 	-- DAP
-	-- 'mfussenegger/nvim-dap',
-	-- 'rcarriga/nvim-dap-ui',
-	-- 'mfussenegger/nvim-dap-python',
-	-- 'leoluz/nvim-dap-go',
+    	{ 'mfussenegger/nvim-dap',
+        	dependencies = {
+            		{ "igorlfs/nvim-dap-view" },
+        	}
+	},
+    	'leoluz/nvim-dap-go',
+   	 -- 'rcarriga/nvim-dap-ui',
+    	-- 'nvim-neotest/nvim-nio',
+    	-- 'mfussenegger/nvim-dap-python',
 	-- Visual
 	'navarasu/onedark.nvim',
 	'nvim-treesitter/nvim-treesitter',
@@ -118,17 +123,32 @@ require('onedark').setup {
 require('onedark').load()
 
 -- DAP Setup
--- local dap, dapui = require("dap"), require("dapui")
--- dapui.setup()
--- dap.listeners.after.event_initialized["dapui_config"] = function()
--- 	dapui.open()
--- end
--- dap.listeners.before.event_terminated["dapui_config"] = function()
--- 	dapui.close()
--- end
--- dap.listeners.before.event_exited["dapui_config"] = function()
--- 	dapui.close()
--- end
---
--- require('dap-python').setup('~/venv/bin/python')
--- require('dap-go').setup()
+require('dap-go').setup()
+
+local dap = require('dap')
+dap.adapters.go = {
+  type = "server",
+  host = "127.0.0.1",
+  port = 1234,
+}
+dap.configurations.go = {
+  {
+    type = "go",
+    name = "Attach to Running Delve",
+    request = "attach",
+    mode = "remote",
+    host = "127.0.0.1",
+    port = 1234,
+  },
+}
+
+require("dap-view").setup({
+  windows = {
+    terminal = {
+      -- Hide the terminal for adapters that don’t use it
+      hide = { "go" },
+      -- Optionally, start the terminal hidden on session start
+      start_hidden = true,
+    },
+  },
+})
