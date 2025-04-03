@@ -26,9 +26,9 @@ require('lazy').setup({
 	-- DAP
 	'mfussenegger/nvim-dap',
 	'rcarriga/nvim-dap-ui',
-	-- 'mfussenegger/nvim-dap-python',
-	'leoluz/nvim-dap-go',
 	'nvim-neotest/nvim-nio',
+	'leoluz/nvim-dap-go',
+	-- 'mfussenegger/nvim-dap-python',
 	-- Visual
 	'navarasu/onedark.nvim',
 	'nvim-treesitter/nvim-treesitter',
@@ -119,17 +119,5 @@ require('onedark').setup {
 require('onedark').load()
 
 -- DAP Setup
-local dap, dapui = require("dap"), require("dapui")
-dapui.setup()
-dap.listeners.after.event_initialized["dapui_config"] = function()
-	dapui.open()
-end
-dap.listeners.before.event_terminated["dapui_config"] = function()
-	dapui.close()
-end
-dap.listeners.before.event_exited["dapui_config"] = function()
-	dapui.close()
-end
-
 -- require('dap-python').setup('~/venv/bin/python')
 require('dap-go').setup()
