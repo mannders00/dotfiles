@@ -24,10 +24,11 @@ require('lazy').setup({
 	'folke/neodev.nvim',
 	{ 'L3MON4D3/LuaSnip', version = 'v2.1.0' },
 	-- DAP
-	-- 'mfussenegger/nvim-dap',
-	-- 'rcarriga/nvim-dap-ui',
+	'mfussenegger/nvim-dap',
+	'rcarriga/nvim-dap-ui',
 	-- 'mfussenegger/nvim-dap-python',
-	-- 'leoluz/nvim-dap-go',
+	'leoluz/nvim-dap-go',
+	'nvim-neotest/nvim-nio',
 	-- Visual
 	'navarasu/onedark.nvim',
 	'nvim-treesitter/nvim-treesitter',
@@ -74,7 +75,7 @@ end
 require('nvim-tree').setup({
 	on_attach = tree_on_attach,
 	view = {
-		side = "left"
+		side = "right"
 	},
 	actions = {
 		open_file = {
@@ -118,17 +119,17 @@ require('onedark').setup {
 require('onedark').load()
 
 -- DAP Setup
--- local dap, dapui = require("dap"), require("dapui")
--- dapui.setup()
--- dap.listeners.after.event_initialized["dapui_config"] = function()
--- 	dapui.open()
--- end
--- dap.listeners.before.event_terminated["dapui_config"] = function()
--- 	dapui.close()
--- end
--- dap.listeners.before.event_exited["dapui_config"] = function()
--- 	dapui.close()
--- end
---
+local dap, dapui = require("dap"), require("dapui")
+dapui.setup()
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+	dapui.close()
+end
+
 -- require('dap-python').setup('~/venv/bin/python')
--- require('dap-go').setup()
+require('dap-go').setup()

@@ -1,13 +1,13 @@
 export TERM=xterm-256color
 
 #export PATH=$PATH:/Users/matt/go/bin
-export PATH=/usr/local/go/bin:$PATH
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/Users/matt/Development/Applications/dart-sass
 
 set -o vi
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
 alias ls='ls --color=auto'
 alias vi=nvim
 alias py=python3
@@ -235,5 +235,3 @@ normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
 alias al="echo -e \"\${ALACRITTY_LIGHT}\" > ~/.config/alacritty/alacritty.toml"
-
-export PATH="$PATH:/home/matt/.foundry/bin"
