@@ -1,22 +1,45 @@
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'lua_ls', 'pyright', 'gopls', 'cssls', 'spectral', 'ts_ls', 'htmx', 'angularls' }
+local servers = { 'lua_ls', 'pyright', 'gopls', 'spectral', 'angularls' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
 	}
 end
 
+--Enable (broadcasting) snippet capability for completion
+
 lspconfig.html.setup {
-	filetypes = { "html", "template" },
+	filetypes = { "html", "templ", "javascript", "css" },
+	capabilities = capabilities,
+	init_options = {
+		configurationSection = { "html", "css", "javascript" },
+		embeddedLanguages = { css = true, javascript = true },
+		provideFormatter = true
+	}
+}
+
+lspconfig.cssls.setup {
+	filetypes = { "css", "scss", "less" },
+  capabilities = capabilities,
+}
+
+lspconfig.ts_ls.setup {
+  capabilities = capabilities,
+}
+
+lspconfig.jsonls.setup {
+  capabilities = capabilities,
 }
 
 lspconfig.emmet_ls.setup {
-	filetypes = { "html", "template" },
+	filetypes = { "html", "template", "javascript" },
 }
 
 lspconfig.yamlls.setup {
