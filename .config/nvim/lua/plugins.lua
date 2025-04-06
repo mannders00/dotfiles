@@ -42,7 +42,7 @@ require('lazy').setup({
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
 	'nvim-lua/plenary.nvim',
-	'folke/which-key.nvim',
+	-- 'folke/which-key.nvim',
 })
 
 -- Initialize Plugins
@@ -106,7 +106,7 @@ require('formatter').setup({
 })
 require('telescope').setup({})
 require('nvim-autopairs').setup()
-require('which-key').setup()
+-- require('which-key').setup()
 require('onedark').setup {
 	colors = {
 		black = "#000000",

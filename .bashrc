@@ -1,6 +1,7 @@
 export TERM=xterm-256color
 
 #export PATH=$PATH:/Users/matt/go/bin
+export PATH=$PATH:~/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/Users/matt/Development/Applications/dart-sass
 
