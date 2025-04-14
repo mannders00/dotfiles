@@ -109,8 +109,8 @@ require('nvim-autopairs').setup()
 -- require('which-key').setup()
 require('onedark').setup {
 	colors = {
-		black = "#000000",
-		bg1 = "#000000",
+		black = "transparent",
+		bg1 = "transparent",
 	},
 	transparent = true,
 	toggle_style_key = '<space>t',
