@@ -20,7 +20,6 @@ require('lazy').setup({
 	'neovim/nvim-lspconfig',
 	'hrsh7th/nvim-cmp',
 	'hrsh7th/cmp-nvim-lsp',
-	'Jezda1337/cmp_bootstrap',
 	'folke/neodev.nvim',
 	{ 'L3MON4D3/LuaSnip', version = 'v2.1.0' },
 	-- DAP
@@ -47,9 +46,6 @@ require('lazy').setup({
 
 -- Initialize Plugins
 require("mason").setup()
-require("bootstrap-cmp.config").setup({
-	file_types = { 'html', 'htmldjango', 'template' },
-})
 require('neodev').setup()
 require('nvim-treesitter.configs').setup {
 	ensured_installed = { "go", "python", "html", "htmldjango", "lua" },

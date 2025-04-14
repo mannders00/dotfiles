@@ -91,7 +91,6 @@ cmp.setup {
 	sources = {
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
-		{ name = 'bootstrap' },
 	},
 	window = {
 		hover = cmp.config.window.bordered(),
