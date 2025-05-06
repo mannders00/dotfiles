@@ -9,4 +9,6 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
 vim.opt.termguicolors = true
+vim.o.termguicolors = false
+vim.cmd('colorscheme default')
 -- vim.o.clipboard="unnamedplus"

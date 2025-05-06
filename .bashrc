@@ -210,28 +210,28 @@ decorations = "None"
 
 ALACRITTY_LIGHT='
 [colors.primary]
-background = "#fffff0"
 foreground = "#2a2b33"
+background = "#EDE0D4"
 
 [colors.normal]
 black   = "#000000"
-red     = "#de3d35"
-green   = "#3e953a"
-yellow  = "#d2b67b"
-blue    = "#2f5af3"
-magenta = "#a00095"
-cyan    = "#3e953a"
-white   = "#bbbbbb"
+red     = "#9E0C0C"
+green   = "#1C5D1C"
+yellow  = "#5C4900"
+blue    = "#243A9D"
+magenta = "#800080"
+cyan    = "#005050"
+white   = "#291F17"
 
 [colors.bright]
 black   = "#000000"
-red     = "#de3d35"
-green   = "#3e953a"
-yellow  = "#d2b67b"
-blue    = "#2f5af3"
-magenta = "#a00095"
-cyan    = "#3e953a"
-white   = "#ffffff"
+red     = "#9E0C0C"
+green   = "#1C5D1C"
+yellow  = "#5C4900"
+blue    = "#243A9D"
+magenta = "#800080"
+cyan    = "#005050"
+white   = "#3D3028"  # slightly lighter warm gray
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }

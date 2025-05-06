@@ -29,13 +29,10 @@ require('lazy').setup({
 	'leoluz/nvim-dap-go',
 	-- 'mfussenegger/nvim-dap-python',
 	-- Visual
-	'navarasu/onedark.nvim',
 	'nvim-treesitter/nvim-treesitter',
 	'luukvbaal/nnn.nvim',
 	'nvim-tree/nvim-tree.lua',
-	'nvim-lualine/lualine.nvim',
 	'lewis6991/gitsigns.nvim',
-	'norcalli/nvim-colorizer.lua',
 	'mhartington/formatter.nvim',
 	-- Utility
 	'windwp/nvim-autopairs',
@@ -86,7 +83,6 @@ require('nvim-tree').setup({
 	},
 })
 require('gitsigns').setup()
-require('colorizer').setup()
 require('formatter').setup({
 	filetype = {
 		python = {
@@ -103,16 +99,6 @@ require('formatter').setup({
 require('telescope').setup({})
 require('nvim-autopairs').setup()
 -- require('which-key').setup()
-require('onedark').setup {
-	colors = {
-		black = "transparent",
-		bg1 = "transparent",
-	},
-	transparent = true,
-	toggle_style_key = '<space>t',
-	toggle_style_list = { 'dark', 'light' },
-}
-require('onedark').load()
 
 -- DAP Setup
 -- require('dap-python').setup('~/venv/bin/python')
