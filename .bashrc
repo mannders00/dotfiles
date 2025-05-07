@@ -222,7 +222,7 @@ yellow  = "#5C4900"
 blue    = "#243A9D"
 magenta = "#800080"
 cyan    = "#005050"
-white   = "#ECE9E1"
+white   = "#FFFFF0"
 
 [colors.bright]
 black   = "#000000"
@@ -232,7 +232,7 @@ yellow  = "#5C4900"
 blue    = "#243A9D"
 magenta = "#800080"
 cyan    = "#005050"
-white   = "#ECE9E1"
+white   = "#FFFFF0"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
