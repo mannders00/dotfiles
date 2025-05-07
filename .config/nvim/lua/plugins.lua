@@ -34,7 +34,6 @@ require('lazy').setup({
 	'nvim-tree/nvim-tree.lua',
 	'lewis6991/gitsigns.nvim',
 	'mhartington/formatter.nvim',
-	'rose-pine/neovim',
 	-- Utility
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
@@ -96,17 +95,6 @@ require('formatter').setup({
 			end
 		}
 	}
-})
-require("rose-pine").setup({
-    palette = {
-        main = {
-			base = '#000000',
-			surface = '#000000'
-        },
-        dawn = {
-			surface = '#faf4ed',
-        },
-    },
 })
 require('telescope').setup({})
 require('nvim-autopairs').setup()

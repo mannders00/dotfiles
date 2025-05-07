@@ -176,164 +176,31 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
+
 ALACRITTY_DARK='
-# Colors section of "Alacritty - TOML configuration file format"
-# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
+[colors.bright]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#bfc5ce"
+yellow = "#e5c07b"
+
+[colors.normal]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#abb2bf"
+yellow = "#e5c07b"
 
 [colors.primary]
-foreground = "#e0def4"
 background = "#000000"
-dim_foreground = "#908caa"
-bright_foreground = "#e0def4"
-
-[colors.cursor]
-text = "#e0def4"
-cursor = "#524f67"
-
-[colors.vi_mode_cursor]
-text = "#e0def4"
-cursor = "#524f67"
-
-[colors.search.matches]
-foreground = "#908caa"
-background = "#26233a"
-
-[colors.search.focused_match]
-foreground = "#191724"
-background = "#ebbcba"
-
-[colors.hints.start]
-foreground = "#908caa"
-background = "#1f1d2e"
-
-[colors.hints.end]
-foreground = "#6e6a86"
-background = "#1f1d2e"
-
-[colors.line_indicator]
-foreground = "None"
-background = "None"
-
-[colors.footer_bar]
-foreground = "#e0def4"
-background = "#1f1d2e"
-
-[colors.selection]
-text = "#e0def4"
-background = "#403d52"
-
-[colors.normal]
-black = "#26233a"
-red = "#eb6f92"
-green = "#31748f"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ebbcba"
-white = "#e0def4"
-
-[colors.bright]
-black = "#6e6a86"
-red = "#eb6f92"
-green = "#31748f"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ebbcba"
-white = "#e0def4"
-
-[colors.dim]
-black = "#6e6a86"
-red = "#eb6f92"
-green = "#31748f"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ebbcba"
-white = "#e0def4"
-
-[font]
-normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
-
-[window]
-decorations = "None"
-'
-
-ALACRITTY_MOON='
-# Colors section of "Alacritty - TOML configuration file format"
-# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
-
-[colors.primary]
-foreground = "#e0def4"
-background = "#232136"
-dim_foreground = "#908caa"
-bright_foreground = "#e0def4"
-
-[colors.cursor]
-text = "#e0def4"
-cursor = "#56526e"
-
-[colors.vi_mode_cursor]
-text = "#e0def4"
-cursor = "#56526e"
-
-[colors.search.matches]
-foreground = "#908caa"
-background = "#393552"
-
-[colors.search.focused_match]
-foreground = "#232136"
-background = "#ea9a97"
-
-[colors.hints.start]
-foreground = "#908caa"
-background = "#2a273f"
-
-[colors.hints.end]
-foreground = "#6e6a86"
-background = "#2a273f"
-
-[colors.line_indicator]
-foreground = "None"
-background = "None"
-
-[colors.footer_bar]
-foreground = "#e0def4"
-background = "#2a273f"
-
-[colors.selection]
-text = "#e0def4"
-background = "#44415a"
-
-[colors.normal]
-black = "#393552"
-red = "#eb6f92"
-green = "#3e8fb0"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ea9a97"
-white = "#e0def4"
-
-[colors.bright]
-black = "#6e6a86"
-red = "#eb6f92"
-green = "#3e8fb0"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ea9a97"
-white = "#e0def4"
-
-[colors.dim]
-black = "#6e6a86"
-red = "#eb6f92"
-green = "#3e8fb0"
-yellow = "#f6c177"
-blue = "#9ccfd8"
-magenta = "#c4a7e7"
-cyan = "#ea9a97"
-white = "#e0def4"
+foreground = "#abb2bf"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
@@ -343,80 +210,27 @@ decorations = "None"
 '
 
 ALACRITTY_LIGHT='
-# Colors section of "Alacritty - TOML configuration file format"
-# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
-
 [colors.primary]
-foreground = "#575279"
-background = "#faf4ed"
-dim_foreground = "#797593"
-bright_foreground = "#575279"
-
-[colors.cursor]
-text = "#575279"
-cursor = "#cecacd"
-
-[colors.vi_mode_cursor]
-text = "#575279"
-cursor = "#cecacd"
-
-[colors.search.matches]
-foreground = "#797593"
-background = "#f2e9e1"
-
-[colors.search.focused_match]
-foreground = "#faf4ed"
-background = "#d7827e"
-
-[colors.hints.start]
-foreground = "#797593"
-background = "#fffaf3"
-
-[colors.hints.end]
-foreground = "#9893a5"
-background = "#fffaf3"
-
-[colors.line_indicator]
-foreground = "None"
-background = "None"
-
-[colors.footer_bar]
-foreground = "#575279"
-background = "#fffaf3"
-
-[colors.selection]
-text = "#575279"
-background = "#dfdad9"
+foreground = "#2a2b33"
+background = "#ECE9E1" # warm stone
 
 [colors.normal]
-black = "#f2e9e1"
-red = "#b4637a"
-green = "#286983"
-yellow = "#ea9d34"
-blue = "#56949f"
-magenta = "#907aa9"
-cyan = "#d7827e"
-white = "#575279"
+black   = "#000000"
+green   = "#1C5D1C"
+yellow  = "#5C4900"
+blue    = "#243A9D"
+magenta = "#800080"
+cyan    = "#005050"
+white   = "#291F17"
 
 [colors.bright]
-black = "#9893a5"
-red = "#b4637a"
-green = "#286983"
-yellow = "#ea9d34"
-blue = "#56949f"
-magenta = "#907aa9"
-cyan = "#d7827e"
-white = "#575279"
-
-[colors.dim]
-black = "#9893a5"
-red = "#b4637a"
-green = "#286983"
-yellow = "#ea9d34"
-blue = "#56949f"
-magenta = "#907aa9"
-cyan = "#d7827e"
-white = "#575279"
+black   = "#000000"
+green   = "#1C5D1C"
+yellow  = "#5C4900"
+blue    = "#243A9D"
+magenta = "#800080"
+cyan    = "#005050"
+white   = "#291F17"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
@@ -426,5 +240,5 @@ decorations = "None"
 '
 
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
-alias am="echo -e \"\${ALACRITTY_MOON}\" > ~/.config/alacritty/alacritty.toml"
 alias al="echo -e \"\${ALACRITTY_LIGHT}\" > ~/.config/alacritty/alacritty.toml"
+
