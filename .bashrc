@@ -216,6 +216,7 @@ background = "#ECE9E1" # warm stone
 
 [colors.normal]
 black   = "#000000"
+red     = "#9E0C0C"
 green   = "#1C5D1C"
 yellow  = "#5C4900"
 blue    = "#243A9D"
@@ -225,6 +226,7 @@ white   = "#ECE9E1"
 
 [colors.bright]
 black   = "#000000"
+red     = "#9E0C0C"
 green   = "#1C5D1C"
 yellow  = "#5C4900"
 blue    = "#243A9D"
