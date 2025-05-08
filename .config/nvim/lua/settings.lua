@@ -11,19 +11,16 @@ vim.g.mapleader = ' '
 -- vim.o.clipboard="unnamedplus"
 
 vim.cmd([[
-  colorscheme default
+  autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
+  autocmd ColorScheme * highlight Keyword   ctermfg=5
+  autocmd ColorScheme * highlight Type      ctermfg=6
+  autocmd ColorScheme * highlight Function  cterm=bold    ctermfg=4
+  autocmd ColorScheme * highlight Constant  ctermfg=3
+  autocmd ColorScheme * highlight String    ctermfg=2
+  " autocmd ColorScheme * highlight Comment   cterm=italic  ctermfg=lightgray
+
   syntax on
   set notermguicolors
-
-  augroup MyColors
-    autocmd!
-    autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
-    autocmd ColorScheme * highlight Keyword   ctermfg=5
-    autocmd ColorScheme * highlight Type      ctermfg=6
-    autocmd ColorScheme * highlight Function  cterm=bold    ctermfg=4
-    autocmd ColorScheme * highlight Constant  ctermfg=3
-    autocmd ColorScheme * highlight String    ctermfg=2
-    " autocmd ColorScheme * highlight Comment   cterm=italic  ctermfg=lightgray
-  augroup END
+  colorscheme default
 ]])
 
