@@ -1,12 +1,3 @@
--- toggle theme
-vim.keymap.set('n', '<leader>t', function ()
-	if vim.o.background == 'dark' then
-		vim.o.background = 'light'
-	else
-		vim.o.background = 'dark'
-	end
-end)
-
 -- Function to enter resize mode
 function enter_resize_mode()
   local keymap_opts = { noremap = true, silent = true }

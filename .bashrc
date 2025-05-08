@@ -178,6 +178,10 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 
 ALACRITTY_DARK='
+[colors.primary]
+background = "#000000"
+foreground = "#abb2bf"
+
 [colors.bright]
 black = "#282c34"
 blue = "#61afef"
@@ -198,10 +202,6 @@ red = "#e06c75"
 white = "#abb2bf"
 yellow = "#e5c07b"
 
-[colors.primary]
-background = "#000000"
-foreground = "#abb2bf"
-
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 
@@ -215,24 +215,24 @@ foreground = "#2a2b33"
 background = "#ECE9E1" # warm stone
 
 [colors.normal]
-black   = "#000000"
-red     = "#9E0C0C"
-green   = "#1C5D1C"
-yellow  = "#5C4900"
-blue    = "#243A9D"
-magenta = "#800080"
-cyan    = "#005050"
-white   = "#FFFFF0"
+black    = "#000000"
+red      = "#b6443a"
+green    = "#40803f"
+yellow   = "#795300"
+blue     = "#3360c1"
+magenta  = "#841e83"
+cyan     = "#006996"
+white    = "#ccccc0"
 
 [colors.bright]
-black   = "#000000"
-red     = "#9E0C0C"
-green   = "#1C5D1C"
-yellow  = "#5C4900"
-blue    = "#243A9D"
-magenta = "#800080"
-cyan    = "#005050"
-white   = "#FFFFF0"
+black    = "#000000"
+red      = "#b6443a"
+green    = "#40803f"
+yellow   = "#795300"
+blue     = "#3360c1"
+magenta  = "#841e83"
+cyan     = "#006996"
+white    = "#ccccc0"
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }

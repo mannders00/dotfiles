@@ -1,5 +1,5 @@
-require('plugins')
-require('settings')
-require('lsp')
 require('maps')
+require('plugins')
+require('lsp')
+require('settings')
 -- require('line')
