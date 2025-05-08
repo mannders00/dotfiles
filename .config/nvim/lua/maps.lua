@@ -53,6 +53,9 @@ vim.keymap.set('n', '<C-p>', builtin.commands, {})
 -- etc
 vim.keymap.set('n', '?', ':WhichKey<CR>', {})
 
+-- zen mode
+vim.keymap.set('n', '<leader>z', ':ZenMode<CR>', { silent = true })
+
 -- Language shortcuts
 vim.keymap.set('i', '<C-e>', 'if err != nil {}<Left>', { noremap = true })
 

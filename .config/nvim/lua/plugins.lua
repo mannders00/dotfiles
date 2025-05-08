@@ -34,6 +34,21 @@ require('lazy').setup({
 	'nvim-tree/nvim-tree.lua',
 	'lewis6991/gitsigns.nvim',
 	'mhartington/formatter.nvim',
+	{
+		'folke/zen-mode.nvim',
+		opts = {
+			window = {
+				width = 0.5,
+				options = {
+					signcolumn = "no",
+					number = false,
+					relativenumber = false,
+					linebreak = true,
+					wrap = true,
+				}
+			},
+		}
+	},
 	-- Utility
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
