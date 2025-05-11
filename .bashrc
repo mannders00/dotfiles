@@ -179,7 +179,7 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 ALACRITTY_DARK='
 [colors.primary]
-background = "#000000"
+background = "#111111"
 foreground = "#abb2bf"
 
 [colors.bright]
