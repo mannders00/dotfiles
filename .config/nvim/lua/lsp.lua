@@ -6,7 +6,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'lua_ls', 'pyright', 'gopls', 'spectral', 'angularls', 'clangd' }
+local servers = { 'lua_ls', 'pyright', 'gopls', 'angularls', 'clangd' }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
@@ -27,15 +27,15 @@ lspconfig.html.setup {
 
 lspconfig.cssls.setup {
 	filetypes = { "css", "scss", "less" },
-  capabilities = capabilities,
+	capabilities = capabilities,
 }
 
 lspconfig.ts_ls.setup {
-  capabilities = capabilities,
+	capabilities = capabilities,
 }
 
 lspconfig.jsonls.setup {
-  capabilities = capabilities,
+	capabilities = capabilities,
 }
 
 lspconfig.emmet_ls.setup {
@@ -44,8 +44,12 @@ lspconfig.emmet_ls.setup {
 
 lspconfig.yamlls.setup {
 	capabilities = capabilities,
-	settings = { yaml = { schemas = {
-		["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*", }, },
+	settings = {
+		yaml = {
+			schemas = {
+				kubernetes = "*.yaml",
+			},
+		},
 	}
 }
 
