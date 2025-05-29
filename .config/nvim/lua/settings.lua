@@ -9,6 +9,7 @@ vim.o.scrolloff = 999
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
+vim.o.splitright = true
 -- vim.o.clipboard="unnamedplus"
 
 vim.cmd([[
