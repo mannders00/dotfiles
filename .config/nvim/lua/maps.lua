@@ -61,7 +61,7 @@ vim.keymap.set('i', '<C-e>', 'if err != nil {}<Left>', { noremap = true })
 
 vim.cmd [[autocmd BufWritePre *.go lua vim.lsp.buf.format()]]
 
--- Change Tabs Quickly
+-- Change Tabs 
 vim.keymap.set('n', '<leader>1', '1gt', {})
 vim.keymap.set('n', '<leader>2', '2gt', {})
 vim.keymap.set('n', '<leader>3', '3gt', {})
@@ -72,7 +72,7 @@ vim.keymap.set('n', '<leader>7', '7gt', {})
 vim.keymap.set('n', '<leader>8', '8gt', {})
 vim.keymap.set('n', '<leader>9', '9gt', {})
 
--- DAP Mappings
+-- DAP 
 vim.api.nvim_set_keymap('n', '<leader>d', ':DapViewToggle<cr>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>w', ':DapViewWatch<cr>', { noremap = true })
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
@@ -80,4 +80,12 @@ vim.keymap.set('n', '<F6>', function() require('dap').restart() end)
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
 vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
-vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
+vim.keymap.set('n', '<leader>b', function() require('dap').toggle_breakpoint() end)
+
+-- Copilot 
+vim.api.nvim_set_keymap('n', '<C-C>', ':CopilotChatToggle <CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-J>', 'copilot#Accept("<CR>")', { expr=true, noremap = true, silent = true })
+vim.keymap.set('i', '<C-H>', '<Plug>(copilot-accept-word)', { noremap=true, silent=true })
+vim.keymap.set("i", "<C-U>", '<Plug>(copilot-next)', { noremap=true, silent=true })
+vim.keymap.set("i", "<C-B>", '<Plug>(copilot-previous)', { noremap=true, silent=true })
+vim.g.copilot_no_tab_map = true

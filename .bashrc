@@ -207,12 +207,15 @@ normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 
 [window]
 decorations = "None"
+
+[terminal]
+shell = { program = "/usr/local/bin/bash", args = ["--login"]}
 '
 
 ALACRITTY_LIGHT='
 [colors.primary]
 foreground = "#2a2b33"
-background = "#ECE9E1" # warm stone
+background = "#dde6f0"
 
 [colors.normal]
 black    = "#000000"
@@ -239,8 +242,23 @@ normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
 
 [window]
 decorations = "None"
+
+[terminal]
+shell = { program = "/usr/local/bin/bash", args = ["--login"]}
 '
+
+# Load bash-completion
+if [ -f "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+  source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+fi
 
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
 alias al="echo -e \"\${ALACRITTY_LIGHT}\" > ~/.config/alacritty/alacritty.toml"
 
+alias kc=kubectl
+complete -o default -F __start_kubectl kc
+source <(kubectl completion bash)
+
+export MANPAGER='nvim +Man!'
+
+source ~/.bash_copilot
