@@ -49,9 +49,18 @@ require('lazy').setup({
 			},
 		}
 	},
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		dependencies = {
+			{ "github/copilot.vim" },              -- or zbirenbaum/copilot.lua
+		},
+		build = "make tiktoken",                   -- Only on MacOS or Linux
+		opts = {},
+	},
 	-- Utility
 	'windwp/nvim-autopairs',
 	'nvim-telescope/telescope.nvim',
+	'nvim-telescope/telescope-ui-select.nvim',
 	'nvim-lua/plenary.nvim',
 	-- 'folke/which-key.nvim',
 })
@@ -112,6 +121,7 @@ require('formatter').setup({
 	}
 })
 require('telescope').setup({})
+require("telescope").load_extension("ui-select")
 require('nvim-autopairs').setup()
 -- require('which-key').setup()
 
