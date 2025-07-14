@@ -5,9 +5,13 @@ vim.o.autoindent = true
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
 vim.o.wrap = false
+vim.o.scrolloff = 999
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
+vim.o.splitright = true
+vim.o.linebreak = true
+vim.o.wrap = true
 -- vim.o.clipboard="unnamedplus"
 
 vim.cmd([[
