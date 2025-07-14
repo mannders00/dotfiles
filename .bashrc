@@ -215,7 +215,7 @@ shell = { program = "/usr/local/bin/bash", args = ["--login"]}
 ALACRITTY_LIGHT='
 [colors.primary]
 foreground = "#2a2b33"
-background = "#dde6f0"
+background = "#ECE9E1"
 
 [colors.normal]
 black    = "#000000"
