@@ -12,7 +12,7 @@ vim.g.mapleader = ' '
 vim.o.splitright = true
 vim.o.linebreak = true
 vim.o.wrap = true
--- vim.o.clipboard="unnamedplus"
+vim.o.clipboard="unnamedplus"
 
 vim.cmd([[
   autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
