@@ -12,6 +12,11 @@ vim.g.mapleader = ' '
 vim.o.splitright = true
 -- vim.o.clipboard="unnamedplus"
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  command = "setlocal wrap linebreak",
+})
+
 vim.cmd([[
   autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
   autocmd ColorScheme * highlight Keyword   ctermfg=5
