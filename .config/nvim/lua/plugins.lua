@@ -52,9 +52,9 @@ require('lazy').setup({
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		dependencies = {
-			{ "github/copilot.vim" },              -- or zbirenbaum/copilot.lua
+			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
 		},
-		build = "make tiktoken",                   -- Only on MacOS or Linux
+		build = "make tiktoken", -- Only on MacOS or Linux
 		opts = {},
 	},
 	-- Utility
@@ -63,6 +63,25 @@ require('lazy').setup({
 	'nvim-telescope/telescope-ui-select.nvim',
 	'nvim-lua/plenary.nvim',
 	-- 'folke/which-key.nvim',
+	{
+		'nvim-orgmode/orgmode',
+		event = 'VeryLazy',
+		ft = { 'org' },
+		config = function()
+			-- Setup orgmode
+			require('orgmode').setup({
+				org_agenda_files = '~/orgfiles/**/*',
+				org_default_notes_file = '~/orgfiles/refile.org',
+			})
+
+			-- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
+			-- add ~org~ to ignore_install
+			-- require('nvim-treesitter.configs').setup({
+			--   ensure_installed = 'all',
+			--   ignore_install = { 'org' },
+			-- })
+		end,
+	}
 })
 
 -- Initialize Plugins
