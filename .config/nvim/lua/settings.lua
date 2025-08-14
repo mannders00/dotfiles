@@ -17,6 +17,8 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal wrap linebreak",
 })
 
+vim.cmd("Copilot disable")
+
 vim.cmd([[
   autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
   autocmd ColorScheme * highlight Keyword   ctermfg=5

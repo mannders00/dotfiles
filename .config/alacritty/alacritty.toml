@@ -1,34 +1,31 @@
 
 [colors.primary]
-foreground = "#2a2b33"
-background = "#dde6f0"
-
-[colors.normal]
-black    = "#000000"
-red      = "#b6443a"
-green    = "#40803f"
-yellow   = "#795300"
-blue     = "#3360c1"
-magenta  = "#841e83"
-cyan     = "#006996"
-white    = "#ccccc0"
+background = "#111111"
+foreground = "#abb2bf"
 
 [colors.bright]
-black    = "#000000"
-red      = "#b6443a"
-green    = "#40803f"
-yellow   = "#795300"
-blue     = "#3360c1"
-magenta  = "#841e83"
-cyan     = "#006996"
-white    = "#ccccc0"
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#bfc5ce"
+yellow = "#e5c07b"
+
+[colors.normal]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#abb2bf"
+yellow = "#e5c07b"
 
 [font]
-normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 
 [window]
 decorations = "None"
-
-[terminal]
-shell = { program = "/usr/local/bin/bash", args = ["--login"]}
 

@@ -179,7 +179,7 @@ export PATH=$BUN_INSTALL/bin:$PATH
 
 ALACRITTY_DARK='
 [colors.primary]
-background = "#000000"
+background = "#111111"
 foreground = "#abb2bf"
 
 [colors.bright]
@@ -203,19 +203,16 @@ white = "#abb2bf"
 yellow = "#e5c07b"
 
 [font]
-normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 
 [window]
 decorations = "None"
-
-[terminal]
-shell = { program = "/usr/local/bin/bash", args = ["--login"]}
 '
 
 ALACRITTY_LIGHT='
 [colors.primary]
 foreground = "#2a2b33"
-background = "#dde6f0"
+background = "#ffffff"
 
 [colors.normal]
 black    = "#000000"
@@ -238,13 +235,10 @@ cyan     = "#006996"
 white    = "#ccccc0"
 
 [font]
-normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 
 [window]
 decorations = "None"
-
-[terminal]
-shell = { program = "/usr/local/bin/bash", args = ["--login"]}
 '
 
 # Load bash-completion
