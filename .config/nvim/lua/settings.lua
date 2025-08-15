@@ -12,6 +12,8 @@ vim.g.mapleader = ' '
 vim.o.splitright = true
 -- vim.o.clipboard="unnamedplus"
 
+vim.cmd(':Copilot disable')
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   command = "setlocal wrap linebreak",
