@@ -72,6 +72,8 @@ require('lazy').setup({
 			require('orgmode').setup({
 				org_agenda_files = '~/org/**/*',
 				org_default_notes_file = '~/org/refile.org',
+				org_startup_indented = true,
+				org_deadline_warning_days = 0,
 			})
 
 			-- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
