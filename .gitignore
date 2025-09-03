@@ -1,5 +1,0 @@
-*
-!.config/nvim/**
-!.bashrc
-!.tmux.conf
-!.gitignore
