@@ -1,3 +1,4 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export TERM=xterm-256color
 
 #export PATH=$PATH:/Users/matt/go/bin
