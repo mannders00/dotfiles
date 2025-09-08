@@ -1,21 +1,27 @@
 vim.o.mouse = "a"
-vim.o.tabstop = 4
 vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true
 vim.o.autoindent = true
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
 vim.o.wrap = false
-vim.o.scrolloff = 999
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.g.mapleader = ' '
 vim.o.splitright = true
+-- vim.o.scrolloff = 999
 -- vim.o.clipboard="unnamedplus"
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   command = "setlocal wrap linebreak",
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "org",
+  command = "setlocal shiftwidth=2 tabstop=2 expandtab",
+})
+
 vim.cmd("Copilot disable")
 vim.cmd([[
   autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
