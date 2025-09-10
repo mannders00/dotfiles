@@ -244,7 +244,7 @@ normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
 alias al="echo -e \"\${ALACRITTY_LIGHT}\" > ~/.config/alacritty/alacritty.toml"
 
-# alias kc=kubectl
+alias kc=kubectl
 # complete -o default -F __start_kubectl kc
 # source <(kubectl completion bash)
 
