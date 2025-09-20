@@ -55,7 +55,11 @@ require('lazy').setup({
 			{ "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
 		},
 		build = "make tiktoken", -- Only on MacOS or Linux
-		opts = {},
+		opts = {
+			mappings = {
+				accept_diff = false,  -- disables the default <C-y> “accept nearest diff”
+			},
+		},
 	},
 	-- Utility
 	'windwp/nvim-autopairs',
