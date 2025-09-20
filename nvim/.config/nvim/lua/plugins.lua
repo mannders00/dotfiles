@@ -127,7 +127,7 @@ require('nvim-tree').setup({
 		},
 	},
 })
-require('gitsigns').setup()
+-- require('gitsigns').setup()
 require('formatter').setup({
 	filetype = {
 		python = {
