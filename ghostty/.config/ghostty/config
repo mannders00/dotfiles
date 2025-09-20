@@ -1,0 +1,10 @@
+# background 	= E8E8E8
+theme = dark:onedark,light:onelight
+
+#background-opacity = 0.9
+
+# selection-invert-fg-bg = true
+font-family = "Hack Nerd Font Mono"
+font-thicken = true
+macos-titlebar-style = native
+font-synthetic-style = no-bold,no-bold-italic
