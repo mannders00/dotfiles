@@ -21,6 +21,7 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'folke/neodev.nvim',
+    'qvalentin/helm-ls.nvim',
     { 'L3MON4D3/LuaSnip', version = 'v2.1.0' },
     -- DAP
     'mfussenegger/nvim-dap',
