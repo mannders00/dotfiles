@@ -59,10 +59,7 @@ require('lazy').setup({
         opts = {
             model = 'claude-sonnet-4',
             window = {
-                layout = 'float',
-                border = 'rounded',
-                width = 0.9,
-                height = 0.85
+                layout = 'replace',
             },
             mappings = {
                 accept_diff = false, -- disables the default <C-y> “accept nearest diff”
