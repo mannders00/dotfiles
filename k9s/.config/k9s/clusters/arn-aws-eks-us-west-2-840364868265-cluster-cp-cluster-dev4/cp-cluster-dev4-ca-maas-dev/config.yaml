@@ -1,0 +1,15 @@
+k9s:
+  cluster: arn:aws:eks:us-west-2:840364868265:cluster/cp-cluster-dev4
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+    - all
+    - cp1-ns
+    - default
+  view:
+    active: namespace
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null

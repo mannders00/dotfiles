@@ -1,0 +1,16 @@
+k9s:
+  cluster: microk8s-cluster
+  namespace:
+    active: default
+    lockFavorites: false
+    favorites:
+    - cert-manager
+    - all
+    - default
+    - nperf15-241024
+  view:
+    active: pods
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null

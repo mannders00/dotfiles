@@ -1,0 +1,21 @@
+k9s:
+  cluster: arn:aws:eks:us-west-2:008675491430:cluster/dp-cluster-msg131
+  namespace:
+    active: cp-automation-dp
+    lockFavorites: false
+    favorites:
+    - cp-automation-dp-2
+    - msgdp-dev
+    - matt-eks131-093025
+    - msgdp-postgres
+    - cp-automation-dp
+    - elastic-system
+    - all
+    - default
+    - nperf12-my-ns
+  view:
+    active: namespace
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null

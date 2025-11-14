@@ -25,6 +25,9 @@ alias vd='vd --theme asciimono'
 export EDITOR='nvim'
 export PATH=$PATH:/home/matt/Applications/lua_ls/bin
 
+# k9s
+export K9S_CONFIG_DIR=~/.config/k9s
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -244,7 +247,7 @@ normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 alias ad="echo -e \"\${ALACRITTY_DARK}\" > ~/.config/alacritty/alacritty.toml"
 alias al="echo -e \"\${ALACRITTY_LIGHT}\" > ~/.config/alacritty/alacritty.toml"
 
-alias kc=kubectl
+alias kc=kubecolor
 # complete -o default -F __start_kubectl kc
 # source <(kubectl completion bash)
 

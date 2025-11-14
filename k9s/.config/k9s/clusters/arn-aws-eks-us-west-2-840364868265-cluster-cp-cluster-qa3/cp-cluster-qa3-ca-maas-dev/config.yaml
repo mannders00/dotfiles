@@ -1,0 +1,14 @@
+k9s:
+  cluster: arn:aws:eks:us-west-2:840364868265:cluster/cp-cluster-qa3
+  namespace:
+    active: cp1-ns
+    lockFavorites: false
+    favorites:
+    - cp1-ns
+    - default
+  view:
+    active: pods
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null

@@ -1,0 +1,18 @@
+k9s:
+  cluster: arn:aws:eks:us-west-2:008675491430:cluster/dp-cluster-msg133
+  namespace:
+    active: qa4-automation-dp
+    lockFavorites: false
+    favorites:
+    - chandlertest
+    - qa4-automation-dp
+    - eks-v15
+    - msg-qa
+    - default
+    - eks-092525
+  view:
+    active: namespace
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null

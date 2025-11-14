@@ -1,0 +1,17 @@
+k9s:
+  cluster: arn:aws:eks:us-west-2:840364868265:cluster/cp-cluster-postgres2
+  namespace:
+    active: kube-system
+    lockFavorites: false
+    favorites:
+    - kube-system
+    - matt-eks133-093025
+    - all
+    - cp1-ns
+    - default
+  view:
+    active: namespace
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null

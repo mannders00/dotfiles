@@ -57,7 +57,7 @@ require('lazy').setup({
         },
         build = "make tiktoken", -- Only on MacOS or Linux
         opts = {
-            model = 'claude-sonnet-4',
+            model = 'claude-sonnet-4.5',
             window = {
                 layout = 'replace',
             },
@@ -102,7 +102,7 @@ require('lazy').setup({
             "MunifTanjim/nui.nvim",
         },
         opts = {
-            lang = "go"
+            lang = "python3"
         },
     }
 })

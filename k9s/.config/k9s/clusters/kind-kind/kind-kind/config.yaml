@@ -1,0 +1,14 @@
+k9s:
+  cluster: kind-kind
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+    - all
+    - default
+  view:
+    active: pods
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
+  proxy: null
