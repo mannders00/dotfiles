@@ -163,7 +163,21 @@ require('formatter').setup({
         }
     }
 })
-require('telescope').setup({})
+require('telescope').setup({
+    defaults = {
+        file_ignore_patterns = {
+            "%.git/",
+            "node_modules/",
+            "%.DS_Store",
+        },
+    },
+    pickers = {
+        find_files = {
+            hidden = true,
+            no_ignore = true,
+        },
+    },
+})
 require("telescope").load_extension("ui-select")
 require('nvim-autopairs').setup()
 -- require('which-key').setup()
