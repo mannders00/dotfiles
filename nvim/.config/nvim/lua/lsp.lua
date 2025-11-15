@@ -1,21 +1,19 @@
 -- Add additional capabilities supported by nvim-cmp
--- local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-local lspconfig = require('lspconfig')
+vim.lsp.config('*', {
+    capabilities = capabilities,
+})
 
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+-- Enable some language servers with the additional completion capabilities
 local servers = { 'lua_ls', 'pyright', 'gopls', 'angularls', 'clangd', 'helm_ls' }
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        capabilities = capabilities,
-    }
+    vim.lsp.enable(lsp)
 end
 
---Enable (broadcasting) snippet capability for completion
-
-lspconfig.html.setup {
+-- HTML LSP
+vim.lsp.config('html', {
     filetypes = { "html", "templ", "javascript", "css" },
     capabilities = capabilities,
     init_options = {
@@ -23,26 +21,36 @@ lspconfig.html.setup {
         embeddedLanguages = { css = true, javascript = true },
         provideFormatter = true
     }
-}
+})
+vim.lsp.enable('html')
 
-lspconfig.cssls.setup {
+-- CSS LSP
+vim.lsp.config('cssls', {
     filetypes = { "css", "scss", "less" },
     capabilities = capabilities,
-}
+})
+vim.lsp.enable('cssls')
 
-lspconfig.ts_ls.setup {
+-- TypeScript LSP
+vim.lsp.config('ts_ls', {
     capabilities = capabilities,
-}
+})
+vim.lsp.enable('ts_ls')
 
-lspconfig.jsonls.setup {
+-- JSON LSP
+vim.lsp.config('jsonls', {
     capabilities = capabilities,
-}
+})
+vim.lsp.enable('jsonls')
 
-lspconfig.emmet_ls.setup {
+-- Emmet LSP
+vim.lsp.config('emmet_ls', {
     filetypes = { "html", "template", "javascript" },
-}
+})
+vim.lsp.enable('emmet_ls')
 
-lspconfig.yamlls.setup {
+-- YAML LSP
+vim.lsp.config('yamlls', {
     capabilities = capabilities,
     settings = {
         yaml = {
@@ -51,7 +59,9 @@ lspconfig.yamlls.setup {
             },
         },
     }
-}
+})
+vim.lsp.enable('yamlls')
+
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = "*.jenkinsfile",
@@ -81,8 +91,6 @@ cmp.setup {
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
             else
                 fallback()
             end
@@ -90,8 +98,6 @@ cmp.setup {
         ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-                luasnip.jump(-1)
             else
                 fallback()
             end
