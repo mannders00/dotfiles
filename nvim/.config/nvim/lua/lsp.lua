@@ -7,7 +7,7 @@ vim.lsp.config('*', {
 })
 
 -- Enable some language servers with the additional completion capabilities
-local servers = { 'lua_ls', 'pyright', 'gopls', 'angularls', 'clangd', 'helm_ls' }
+local servers = { 'lua_ls', 'pyright', 'gopls', 'clangd', 'helm_ls' }
 for _, lsp in ipairs(servers) do
     vim.lsp.enable(lsp)
 end
