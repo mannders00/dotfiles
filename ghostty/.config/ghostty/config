@@ -9,3 +9,4 @@ font-thicken = true
 # macos-titlebar-style = hidden
 macos-titlebar-style = "tabs"
 font-synthetic-style = no-bold,no-bold-italic
+custom-shader = ~/.config/ghostty/cursor_blaze.glsl
