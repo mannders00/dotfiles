@@ -20,6 +20,8 @@ alias gcm='git commit -m'
 alias gst='git status'
 alias gp='git push'
 
+alias k9s='$HOME/dotfiles/k9s/.config/k9s/k9s-theme-sync.sh'
+
 alias vd='vd --theme asciimono'
 
 export EDITOR='nvim'
