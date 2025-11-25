@@ -1,4 +1,3 @@
-# background 	= E8E8E8
 theme = dark:onedark,light:onelight
 
 #background-opacity = 0.9
@@ -10,3 +9,7 @@ font-thicken = true
 macos-titlebar-style = "tabs"
 font-synthetic-style = no-bold,no-bold-italic
 custom-shader = ~/.config/ghostty/cursor_blaze.glsl
+
+background-image = ~/.config/ghostty/earth.png
+background-image-opacity = 0.15
+background-image-fit = cover
