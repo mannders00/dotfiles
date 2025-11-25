@@ -1,5 +1,5 @@
 foreground: &foreground "#abb2bf"
-background: &background "#080808"
+background: &background "transparent"
 black: &black "#282c34"
 blue: &blue "#61afef"
 green: &green "#98c379"
