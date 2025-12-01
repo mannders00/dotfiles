@@ -31,6 +31,8 @@ function exit_resize_mode()
   vim.defer_fn(function() vim.api.nvim_command('echo ""') end, 2000) -- Clear the message after 2 
 end
 
+vim.api.nvim_set_keymap('n', '<leader>ev', ':edit $MYVIMRC<CR>', { noremap = true })
+
 -- Map leader key to enter resize mode
 vim.api.nvim_set_keymap('n', '<leader>r', ':lua enter_resize_mode()<CR>', { noremap = true, silent = true })
 
