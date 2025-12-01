@@ -55,7 +55,7 @@ require('lazy').setup({
         dependencies = {
             { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
         },
-        build = "make tiktoken", -- Only on MacOS or Linux
+        build = "make tiktoken",      -- Only on MacOS or Linux
         opts = {
             model = 'claude-sonnet-4.5',
             window = {
@@ -83,14 +83,27 @@ require('lazy').setup({
                 org_default_notes_file = '~/org/scratch.org',
                 org_startup_indented = true,
                 org_deadline_warning_days = 0,
+                org_agenda_custom_commands = {
+                    w = {
+                        description = "Work",
+                        types = {
+                            {
+                                type = 'agenda',
+                                org_agenda_tag_filter_preset = 'work'
+                            }
+                        }
+                    },
+                    p = {
+                        description = "Personal",
+                        types = {
+                            {
+                                type = 'agenda',
+                                org_agenda_tag_filter_preset = 'personal'
+                            }
+                        }
+                    },
+                }
             })
-
-            -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
-            -- add ~org~ to ignore_install
-            -- require('nvim-treesitter.configs').setup({
-            --   ensure_installed = 'all',
-            --   ignore_install = { 'org' },
-            -- })
         end,
     },
     -- Study
@@ -111,7 +124,7 @@ require('lazy').setup({
 require("mason").setup()
 require('neodev').setup()
 require('nvim-treesitter.configs').setup {
-    ensured_installed = { "go", "python", "html", "htmldjango", "lua", "org" },
+    ensured_installed = { "go", "bash", "javascript", "html", "lua", "org" },
     sync_install = false,
     auto_install = true,
     highlight = {
