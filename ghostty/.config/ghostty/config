@@ -5,8 +5,8 @@ theme = dark:onedark,light:onelight
 # selection-invert-fg-bg = true
 font-family = "Hack Nerd Font Mono"
 font-thicken = true
-macos-titlebar-style = hidden
-# macos-titlebar-style = transparent
+# macos-titlebar-style = hidden
+macos-titlebar-style = transparent
 font-synthetic-style = no-bold,no-bold-italic
 custom-shader = ~/.config/ghostty/cursor_blaze.glsl
 
