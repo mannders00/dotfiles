@@ -143,8 +143,8 @@ local function tree_on_attach(bufnr)
     local api = require('nvim-tree.api')
     api.config.mappings.default_on_attach(bufnr)
     vim.keymap.del('n', '<C-e>', { buffer = bufnr })
-    vim.keymap.set("n", "H", function() api.tree.resize({ relative = -5 }) end, { buffer = bufnr })
-    vim.keymap.set("n", "L", function() api.tree.resize({ relative = 5 }) end, { buffer = bufnr })
+    vim.keymap.set("n", "<M-h>", function() api.tree.resize({ relative = -5 }) end, { buffer = bufnr })
+    vim.keymap.set("n", "<M-l>", function() api.tree.resize({ relative = 5 }) end, { buffer = bufnr })
 end
 require('nvim-tree').setup({
     on_attach = tree_on_attach,
