@@ -33,6 +33,7 @@ vim.lsp.enable('cssls')
 
 -- TypeScript LSP
 vim.lsp.config('ts_ls', {
+    filetypes = { "html" },
     capabilities = capabilities,
 })
 vim.lsp.enable('ts_ls')
@@ -109,9 +110,16 @@ cmp.setup {
         { name = 'orgmode' },
     },
     window = {
-        hover = cmp.config.window.bordered(),
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        completion = {
+            style = "minimal",
+            border = "rounded",
+            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None"
+        },
+        documentation = {
+            style = "minimal",
+            border = "rounded",
+            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder'
+        }
     },
 }
 
