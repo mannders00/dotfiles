@@ -57,7 +57,6 @@ require('lazy').setup({
         },
         build = "make tiktoken",      -- Only on MacOS or Linux
         opts = {
-            model = 'claude-sonnet-4.5',
             window = {
                 layout = 'replace',
             },
@@ -148,6 +147,9 @@ local function tree_on_attach(bufnr)
 end
 require('nvim-tree').setup({
     on_attach = tree_on_attach,
+    view = {
+        side = "right",
+    },
     tab = {
         sync = {
             open  = true,

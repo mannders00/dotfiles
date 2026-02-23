@@ -109,9 +109,20 @@ cmp.setup {
         { name = 'orgmode' },
     },
     window = {
-        hover = cmp.config.window.bordered(),
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        -- hover = cmp.config.window.bordered(),
+        -- completion = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered(),
+        -- hover = { style = "minimal", border = "rounded" },
+        completion = {
+            style = "minimal",
+            border = "rounded",
+            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
+        },
+        documentation = {
+            style = "minimal",
+            border = "rounded",
+            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
+        },
     },
 }
 

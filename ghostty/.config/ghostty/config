@@ -2,13 +2,14 @@ theme = dark:onedark,light:onelight
 
 #background-opacity = 0.9
 
-# selection-invert-fg-bg = true
-font-family = "Hack Nerd Font Mono"
-font-thicken = true
-# macos-titlebar-style = hidden
-macos-titlebar-style = transparent
+selection-invert-fg-bg = true
+font-family = SFMono Nerd Font
+font-style = SemiBold
+font-style-bold = SemiBold
+# font-thicken = true
+macos-titlebar-style = hidden
 font-synthetic-style = no-bold,no-bold-italic
-custom-shader = ~/.config/ghostty/cursor_blaze.glsl
+# custom-shader = ~/.config/ghostty/cursor_blaze.glsl
 
 background-image = ~/.config/ghostty/earth.png
 background-image-opacity = 0
