@@ -148,7 +148,7 @@ end
 require('nvim-tree').setup({
     on_attach = tree_on_attach,
     view = {
-        side = "right",
+        side = "left",
     },
     tab = {
         sync = {
