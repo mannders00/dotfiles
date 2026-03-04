@@ -113,7 +113,7 @@ cmp.setup {
         completion = {
             style = "minimal",
             border = "rounded",
-            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None"
+            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None',
         },
         documentation = {
             style = "minimal",
