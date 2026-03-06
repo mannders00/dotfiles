@@ -27,4 +27,4 @@ background-image-opacity = 0
 background-image-fit = cover
 
 # shader
-# custom-shader = ~/.config/ghostty/cursor_blaze.glsl
+custom-shader = ~/.config/ghostty/starfield.glsl

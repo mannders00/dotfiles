@@ -7,7 +7,7 @@ vim.lsp.config('*', {
 })
 
 -- Enable some language servers with the additional completion capabilities
-local servers = { 'lua_ls', 'pyright', 'gopls', 'clangd', 'helm_ls', 'bashls' }
+local servers = { 'lua_ls', 'pyright', 'gopls', 'clangd', 'helm_ls', 'bashls', 'angularls' }
 for _, lsp in ipairs(servers) do
     vim.lsp.enable(lsp)
 end
@@ -33,7 +33,7 @@ vim.lsp.enable('cssls')
 
 -- TypeScript LSP
 vim.lsp.config('ts_ls', {
-    filetypes = { "html" },
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "html" },
     capabilities = capabilities,
 })
 vim.lsp.enable('ts_ls')
