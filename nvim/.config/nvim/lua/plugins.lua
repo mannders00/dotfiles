@@ -72,12 +72,15 @@ require('lazy').setup({
     'nvim-lua/plenary.nvim',
     -- 'folke/which-key.nvim',
     {
-        'nvim-orgmode/orgmode',
+        "nvim-orgmode/orgmode",
+        dependencies = {
+            "lukas-reineke/headlines.nvim",
+        },
         event = 'VeryLazy',
         ft = { 'org' },
         config = function()
-            -- Setup orgmode
-            require('orgmode').setup({
+            require("orgmode").setup({
+                org_startup_indented = true, -- ← this gives Emacs-style virtual indentation under headings (huge for legibility)
                 org_agenda_files = '~/org/**/*',
                 org_default_notes_file = '~/org/scratch.org',
                 org_startup_indented = true,
@@ -103,6 +106,16 @@ require('lazy').setup({
                     },
                 }
             })
+
+            require("headlines").setup({
+                org = {
+                    fat_headlines = false, -- ← no more huge blocks
+                    headline_highlights = { "Headline1", "Headline2", "Headline3", "Headline4" },
+                    quote_string = "│", -- thinner vertical bar for quotes (optional but nicer)
+                    quote_highlight = "Quote",
+                },
+            })
+
         end,
     },
     -- Study
