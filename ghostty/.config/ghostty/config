@@ -3,19 +3,13 @@ theme = dark:onedark,light:onelight
 
 # fonts
 font-family = SFMono Nerd Font
-font-style = SemiBold
-font-style-bold = SemiBold
-
-selection-invert-fg-bg = true
-font-family = SFMono Nerd Font
-font-style = SemiBold
-font-style-bold = SemiBold
-# font-thicken = true
+# font-style = Regular
+# font-style-bold = Regular
+font-thicken = true
 macos-titlebar-style = hidden
-font-synthetic-style = no-bold,no-bold-italic
 
 # linux
-gtk-titlebar = false
+# gtk-titlebar = false
 
 # cursor
 shell-integration-features = no-cursor
@@ -26,5 +20,7 @@ background-image = ~/.config/ghostty/earth.png
 background-image-opacity = 0
 background-image-fit = cover
 
+macos-icon = xray
+
 # shader
-custom-shader = ~/.config/ghostty/starfield.glsl
+# custom-shader = ~/.config/ghostty/starfield.glsl
