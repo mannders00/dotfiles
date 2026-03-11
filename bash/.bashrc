@@ -257,8 +257,3 @@ export MANPAGER='nvim +Man!'
 
 export FLYCTL_INSTALL="/home/matt/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
-echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
-echo "┃ Remember the mission. Work harder. ┃"
-echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
-

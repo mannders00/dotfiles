@@ -22,6 +22,21 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal shiftwidth=2 tabstop=2 expandtab",
 })
 
+-- Highlighting for orgmode files with highlight.nvim
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    local cursorline = vim.api.nvim_get_hl(0, { name = "CursorLine" })
+    local sep        = vim.api.nvim_get_hl(0, { name = "WinSeparator" }).fg
+                   or vim.api.nvim_get_hl(0, { name = "Comment" }).fg
+
+    vim.api.nvim_set_hl(0, "Headline1", { bg = cursorline.bg, underline = true, sp = sep })
+    vim.api.nvim_set_hl(0, "Headline2", { bg = cursorline.bg, underline = true, sp = sep })
+    vim.api.nvim_set_hl(0, "Headline3", { bg = cursorline.bg, underline = true, sp = sep })
+    vim.api.nvim_set_hl(0, "Headline4", { bg = cursorline.bg, underline = true, sp = sep })
+  end,
+})
+
+-- Global colorscheme based on terminal colors
 vim.cmd("Copilot disable")
 vim.cmd([[
   autocmd ColorScheme * highlight Statement cterm=bold    ctermfg=5
@@ -36,4 +51,3 @@ vim.cmd([[
   set notermguicolors
   colorscheme default
 ]])
-
